@@ -1,5 +1,5 @@
 # golang-utils
-<p> A utility package aimed at performance and as an extension to the standard library. </p>
+> A utility package aimed at performance and as an extension to the standard library. </p>
   
 The benchmarks folder discusses the solutions and shows why things are the way they are.
 
