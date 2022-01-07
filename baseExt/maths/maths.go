@@ -1,6 +1,9 @@
 package maths
 
-import "math"
+import (
+	"math"
+	"sort"
+)
 
 // Abs returns the absolut value of a given integers
 func Abs(e int) int {
@@ -48,4 +51,15 @@ func Product(e ...int) int {
 		res *= i
 	}
 	return res
+}
+
+// Average computes the average value of a list of integers
+func Average(e ...int) float64 {
+	return float64(Sum(e...)) / float64(len(e))
+}
+
+// Median computes the median of a list of integers
+func Median(e ...int) int {
+	sort.Ints(e)
+	return e[len(e)/2]
 }
