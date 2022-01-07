@@ -4,8 +4,8 @@ import (
 	"strconv"
 )
 
-// IntsToString converts an int array into a string array
-func IntsToString(l ...int) []string {
+// ListToString converts an int array into a string array
+func ListToString(l ...int) []string {
 	a := make([]string, 0, len(l))
 	for _, e := range l {
 		a = append(a, strconv.Itoa(e))
@@ -22,12 +22,22 @@ func CountElements(frequency map[int]int, l ...int) {
 }
 
 // DeleteElem deletes the ith element from the slice while changing the order of the slice
-func DeleteElem(a []int, i int) {
-	a[len(a)-1], a[i] = a[i], a[len(a)-1]
-	a = a[:len(a)-1]
+func DeleteElem(l []int, i int) {
+	l[len(l)-1], l[i] = l[i], l[len(l)-1]
+	l = l[:len(l)-1]
 }
 
 // DeleteElemKeepOrder deletes the ith element from the slice while preserving the previous order
-func DeleteElemKeepOrder(a []int, i int) {
-	a = append(a[:i], a[i+1:]...)
+func DeleteElemKeepOrder(l []int, i int) {
+	l = append(l[:i], l[i+1:]...)
+}
+
+// ListContains checks if an integer e is in a integer list l
+func ListContains(l []int, e int) bool {
+	for _, i := range l {
+		if e == i {
+			return true
+		}
+	}
+	return false
 }

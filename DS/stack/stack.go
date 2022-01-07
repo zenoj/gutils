@@ -1,6 +1,6 @@
 package stack
 
-/* Int Stack implementation */
+/********************************* Int Stack implementation ***************************************/
 
 // IntStack is an easy stack implementation that provides the usual stack operations
 type IntStack struct {
@@ -34,7 +34,7 @@ func (s *IntStack) Peek() int {
 	return s.a[len(s.a)-1]
 }
 
-/*   String Stack implementation */
+/*********************************** String Stack implementation *****************************************/
 
 // StringStack is an easy stack implementation that stores strings and provides the usual methods of a stack.
 type StringStack struct {
